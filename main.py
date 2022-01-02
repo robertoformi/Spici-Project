@@ -30,7 +30,7 @@ def login():
         return render_template('login.html')
 
 
-@app.route('/subscribe.html', methods=['GET', 'POST']) 
+@app.route('/subscribe', methods=['GET', 'POST']) 
 def subscribe():
     
     if request.method =='POST':
@@ -55,7 +55,7 @@ def subscribe():
         
         if email_is_already_stored(email):
             flash("Try with another email: the email is already stored", "error")   
-            return redirect('/subscribe.html')
+            return redirect('/subscribe')
         else:
             data = {"name": name,
                     "surname": surname,
