@@ -74,15 +74,7 @@ def subscribe():
                     "vat": vat,
                     }
 
-            new_keys = []
-            new_values = []
-            for key, value in data.items():
-                if value != "":
-                    new_keys.append(key)
-                    new_values.append(value)
-            fixed_data = dict(zip(new_keys,new_values)) #dictionary without items that present an empty value 
-
-            collection.insert_one(fixed_data)
+            collection.insert_one(data)
         return redirect('/greet')
 
     else:
@@ -140,8 +132,6 @@ def data_finder(email):
     del data_found["ps"]    
     cur.close()
     return data_found
-    
-
 
 if __name__ == "__main__":
     app.secret_key = 'qwerty1234'
