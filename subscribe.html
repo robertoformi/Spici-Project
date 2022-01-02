@@ -1,0 +1,276 @@
+<html style="font-family: 'Roboto', sans-serif">
+    <title>Spicy Database</title>
+
+    <head>
+        <link rel="stylesheet" type="text/css" href="https://drive.google.com/uc?export=view&id=1alO952ux43Lz_5-m2U8TFg7DVNou-tzF"> 
+        <link rel="stylesheet" type="text/css" href="tenta.css"> 
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+    </head>
+
+<div id="navbar">
+    <a href="http://www.unina.it/home;jsessionid=57876DFDEB75069A6881C6DFB84B69B8.node_publisher11  ">| Unina Website &#127891;</a>
+    <a href="http://datascience.unina.it/">| Data Science Unina Website &#128187;</a>
+    <a href="https://www.spici.eu/en/home-en/">| Spici Website 🌶️</a>
+</div>
+
+    <div>   {% with messages = get_flashed_messages() %}
+            {% if messages %}
+                {% for message in messages %}
+                <h1>{{message}}</h1>
+            {% endfor %}
+        {% endif %}
+    {% endwith %} 
+</div>
+
+<div class="sidenav">
+    <center><b style="font-size:20px; color:whitesmoke"> Powered By</b></center><br>
+        <b><a href="https://www.mongodb.com/" style="text-decoration: none"><f>| MongoDB 🍃</f></a></b>
+        <b><a href="https://www.python.org/" style="text-decoration: none"><c>| Python 🐍</c></a></b>
+        <b><a href="https://flask.palletsprojects.com/en/2.0.x/" style="text-decoration: none"><d>| Flask 🌶️</a></d></b><br>
+</div>
+
+    
+<div class="sidenav2">
+
+    <br><center><b style="font-size:24px; color:whitesmoke"> Already Registered?</b></center>
+        <center><a style="font-size:24px; color:rgb(37, 37, 255)" href="/" class="button">Log-in!</a><br></center></b>
+
+
+</div>
+
+
+
+
+
+   <!-- <img src="mongoloide.png" width="170px"; height="167px"> -->
+    
+  <!-- <br><center><a class="welcome"> Welcome to the Spici Database! </a></center> -->
+
+<body>            
+    <div class="form-box2">
+        <h1> Account Registration Form</h1>
+            <h2 style="font-size: 23px"> Personal Details 
+                <div class="tooltip">
+                    <scroll style="font-size: 27px">&#x1F4C3;</scroll>
+                        <span class="tooltiptext">This part of the form is mandatory. Only the company's legal representative can fill it.</span>
+                </div>
+            </h2>
+
+
+    <form class ="form-signup" actions="/greet" method ="POST" style= "display:block">
+
+        <br><br>
+
+    <div style="position:relative; text-align: center">
+        <box class="input-box">
+            <input type="text" placeholder="Name" name='name' required pattern="[A-Za-z]{2,20}" onchange="this.setCustomValidity(this.validity.patternMismatch ? 'Must have at least 2 characters, non numeric, non symbol' : '')">
+        </box>
+        <box class="input-box">
+            <input type="text" placeholder="Surname" name='surname' required pattern="[A-Za-z]{2,20}" onchange="this.setCustomValidity(this.validity.patternMismatch ? 'Must have at least 2 characters, non numeric, non symbol' : '')">
+        </box>
+    </div>
+
+        <br><br><br>
+
+    <div style="position:relative; text-align: center">
+        <box class="input-boxPWSub">
+            <input id="password1" name="password1" type="password" pattern="^\S{6,}$" onchange="this.setCustomValidity(this.validity.patternMismatch ? 'Must have at least 6 characters' : ''); if(this.checkValidity()) form.password2.pattern = this.value;" placeholder="Password" required>
+                <i  class="far fa-eye" id="togglePassword" type="checkbox" onclick="MostraPass()" style="text-align:end; position: relative; font-size:larger"></i> 
+        </box>
+        <box class="input-boxPWSub">
+            <input id="password2" name="password2" type="password" pattern="^\S{6,}$" onchange="this.setCustomValidity(this.validity.patternMismatch ? 'Please enter the same Password as above' : '');" placeholder="Verify Password" required>
+                <i  class="far fa-eye" id="togglePassword" type="checkbox" onclick="MostraVerify()" style="text-align:end; position: relative; font-size:larger"></i> 
+        </box>
+    </div>
+
+    <br><br><br>
+
+    <div style="position:relative; text-align: center">
+        <box class="input-box">
+            <input type="text" onfocus="(this.type='date')" onfocusout="(this.type='Date of Foundation')" placeholder="Date of Birth" name ='age' onchange="this.setCustomValidity(this.validity.patternMismatch ? 'Mandatory field' : '')">
+        </box>
+
+        <box class="input-box">
+            <input type="text" placeholder="Fiscal Code" required name="fiscal_code" pattern="([A-z0-9À-ž\s]){2,}" onchange="this.setCustomValidity(this.validity.patternMismatch ? 'Must have at least 2 characters' : '')" >
+        </box>
+    </div>
+
+        <br><br><br>
+
+    <div style="position:relative; text-align: center">
+        <box class="input-box">
+            <input type="email" required placeholder="Email ID" name ='email' pattern = "[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" onchange="this.setCustomValidity(this.validity.patternMismatch ? 'Must be in the format of a standard email.' : '')">
+        </box>
+        
+        <box class="input-box">
+            <input type="text" placeholder="Phone Number" required name="phone_num" pattern="([0-9){2,}" onchange="this.setCustomValidity(this.validity.patternMismatch ? 'Must have at least 2 characters' : '')" >
+        </box>
+    </div>
+    
+    </form>
+
+
+        <br><br>
+
+    <div id='menubar1' style="text-align:center">
+        <button type="button" class="button2" onclick="show()" style="font-size: 23px">☰ Company Details</button>
+        <div class="tooltip">
+            <scroll style="font-size: 27px">&#x1F4C3;</scroll>
+            <span class="tooltiptext">This second part can be compiled after the legal representative has registered to the website with his own personal credentials.</span>
+        </div>
+    </div>
+    
+    <br>
+
+
+<Next action="FormController/save" method = "POST" id="theForm" style="display: none">
+
+    <div style="position:relative; text-align: center">
+        <box class="input-box">
+            <input type="text" placeholder="Company name" name='company_name' required pattern = "([A-z0-9À-ž\s]){2,}" onchange="this.setCustomValidity(this.validity.patternMismatch ? 'Must have at least 2 characters':'')">
+        </box>
+
+        <box class="input-box">
+            <input type="text" required placeholder="Corporate Purpose" name ='purpose' pattern = "([A-z0-9À-ž\s]){5,}" onchange="this.setCustomValidity(this.validity.patternMismatch ? 'Must have at least 5 characters' : '')">
+        </box>
+    </div>
+
+        <br><br><br>
+
+    <div style="position:relative; text-align: center">
+        <box class="input-box"> 
+            <input type="text" onfocus="(this.type='date')" onfocusout="(this.type='Date of Foundation')" placeholder="Date of Foundation" name ='date_foundation' onchange="this.setCustomValidity(this.validity.patternMismatch ? 'Mandatory field' : '')">
+        </box>
+
+        <box class="input-box">
+            <input type="text" placeholder="Legal Representative's Fiscal Code" required name="legal_rep" pattern="([A-z0-9À-ž\s]){2,}" onchange="this.setCustomValidity(this.validity.patternMismatch ? 'Must have at least 2 characters' : '')" >
+        </box>
+    </div>
+
+      <!--  <box class="input-box">  
+            <input type="text" placeholder="Country" required name="country" pattern="([A-z0-9À-ž\s]){2,}" onchange="this.setCustomValidity(this.validity.patternMismatch ? 'Please enter the country' : '');" >
+        </box> -->
+
+        <br><br><br>
+    
+    <div style="position:relative; text-align: center">
+        <box class="input-box">
+            <input type="text" placeholder="City" required name="city" pattern="([A-z0-9À-ž\s]){2,}" onchange="this.setCustomValidity(this.validity.patternMismatch ? 'Please enter the city' : '');" >
+        </box>
+        <box class="input-box">
+            <input type="text" placeholder="Street" required name="street" pattern="([A-z0-9À-ž\s]){2,}" onchange="this.setCustomValidity(this.validity.patternMismatch ? 'Please enter the street' : '');" >
+        </box>
+    </div> 
+   
+        <br><br><br>
+
+    <div style="position:relative; text-align: center">
+        <box class="input-box">
+            <input type="text" placeholder="ZIP Code" required name="zip" pattern="([A-Z0-9\s]){3,}" onchange="this.setCustomValidity(this.validity.patternMismatch ? 'Must have at least 3 characters' : '');" >
+        </box>
+
+        <box class="input-box">
+            <input type="text" placeholder="Share capital" required name="share_capital" pattern="[0-9]" onchange="this.setCustomValidity(this.validity.patternMismatch ? 'At least 1euro': '');" >
+        </box>
+    </div>
+
+    <br><br>
+    
+    <div style="position:relative; text-align: center">
+        <box class="input-box">
+            <input type="text" placeholder="VAT Number" required name="vat" pattern="[0-9]" onchange="this.setCustomValidity(this.validity.patternMismatch ? 'Insert 11 digits': '') ; " >
+        </box>
+    </div>
+        
+        <br><br>
+
+</Next>
+       
+        <div id='menubar1' style="text-align:center">
+            <a><input type ="submit" value="Subscribe" class="button"></a>
+        </div>
+    </div>
+
+
+
+    <!-- <footer id="colophon" class="site-footer" role="contentinfo">
+        <div class="site-info">
+           <div class="container">
+              <div class="btt">
+                 <a class="back-to-top" href="#page" title="Back To Top"><i class="fa fa-caret-up wow flash" data-wow-duration="2s" style="visibility: visible; animation-duration: 2s; animation-name: flash;"></i></a>
+              </div>
+           </div>
+           <div class="container">
+              <div class="row">
+                 <div class="col-sm-4"><strong>Copyright</strong><br>© 2021 SPICI srl – Società per l’Innovazione, la Cooperazione e l’Internazionalizzazione</div>
+                 <div class="col-sm-4"><a href="/cookie-policy/">Cookie Policy</a> / <a href="/privacy-policy/">Privacy Policy</a> / <a href="https://www.spici.eu/politica-per-la-qualita/">Politica per la Qualità</a></div>
+                 <div class="col-sm-4">
+                    <strong>Stay updated</strong>
+                    <div class="footer-socials"><a target="_blank" href="https://www.facebook.com/Spicisrl" title="Facebook Page"><i class="fa fa fa-facebook"></i></a><a target="_blank" href="https://www.linkedin.com/company/spici-srl-societ%C3%A0-per-l-innovazione-la-cooperazione-e-l-internazionalizzazione/" title="Linkedin"><i class="fa fa fa-linkedin"></i></a></div>
+                 </div>
+              </div>
+           </div>
+        </div>
+     </footer> -->
+    
+</body>
+</html>
+
+  <!-- <script>
+
+    function myFunction() {
+        var x = document.getElementById("password1");
+        var y = document.getElementById("password2");
+        if (x.type === "password") {
+        x.type = "text";
+        } else {
+        x.type = "password";
+        }
+        if (y.type === "password") {
+        y.type = "text";
+        } else {
+        y.type = "password";
+        }
+        if(x!=y)
+        prompt= ' Passwords Not Matched!!'
+        }
+        
+    </script> -->
+    
+
+<script>
+    function MostraPass() {
+        var x = document.getElementById("password1");
+    if (x.type === "password") {
+    x.type = "text";
+    } else {
+    x.type = "password";
+    }}
+    function MostraVerify() {
+        var x = document.getElementById("password2");
+    if (x.type === "password") {
+    x.type = "text";
+    } else {
+    x.type = "password";
+    }}
+</script>
+
+
+<script type = "text/javascript">  
+
+
+
+    function show() {
+  var x = document.getElementById("theForm");
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "none";
+  }
+} 
+
+
+</script>  
