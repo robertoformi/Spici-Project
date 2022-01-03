@@ -93,6 +93,7 @@ def logged_in():
 @app.route("/logout")
 def logout():
     session.pop("name", None) # This remove the name and placed instead of it "None".
+    session.pop("email", None)
     # It is important because when someone press the logout button, then the session with its name should not be accessible, by typing the path, anymore.
     return redirect("/")
 
