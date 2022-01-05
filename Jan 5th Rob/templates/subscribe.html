@@ -1,5 +1,7 @@
 <html style="font-family: 'Roboto', sans-serif">
 
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
     <head>
         <title>Spicy Database</title>
         <link rel="stylesheet" type="text/css" href="https://drive.google.com/uc?export=view&id=1alO952ux43Lz_5-m2U8TFg7DVNou-tzF"> 
@@ -9,6 +11,8 @@
         <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
         <script src="https://code.iconify.design/2/2.1.0/iconify.min.js"></script>
+        <script src="https://www.google.com/recaptcha/api.js"></script>
+
     </head>
 
     <div id="navbar">
@@ -29,7 +33,7 @@
     <div class="sidenav2">
 
         <br><center><b style="font-size:24px; color:whitesmoke"> Already Registered?</b></center>
-            <center><a style="font-size:24px; color:rgb(37, 37, 255)" href="/" class="button">Log-in!</a><br></center></b>
+            <center><a style="font-size:24px; color:rgb(37, 37, 255)" href="login.html" class="button">Log-in!</a><br></center></b>
 
     </div>
 
@@ -53,7 +57,7 @@
 
         <br><br>
 
-        <div style="position:relative; text-align: center">
+        <div style="text-align: center">
             <box class="input-box">
                 <input type="text" placeholder="Name" name='name' required pattern ="[A-Za-z]{2,20}" onchange="this.setCustomValidity(this.validity.patternMismatch ? 'Must have at least 2 characters, non numeric, non symbol' : '')">
             </box>
@@ -64,7 +68,7 @@
 
             <br><br><br>
 
-        <div style="position:relative; text-align: center">
+        <div style="text-align: center">
             <box class="input-boxPWSub">
                 <input id="password1" name="password1" type="password" pattern="^\S{8,}$" onchange="this.setCustomValidity(this.validity.patternMismatch ? 'Must have at least 8 characters.' : ''); if(this.checkValidity()) form.password2.pattern = this.value;" placeholder="Password" required>
                     <i  class="far fa-eye" id="togglePassword" type="checkbox" onclick="MostraPass()" style="text-align:end; position: relative; font-size:larger"></i> 
@@ -76,19 +80,19 @@
         </div>
         <br><br><br>
 
-        <div style="position:relative; text-align: center">
+        <div style="text-align: center">
             <box class="input-box">
                 <input type="text" required onfocus="(this.type='date')" onfocusout="(this.type='date of birth')" placeholder="Date of Birth" name ='age' onchange="this.setCustomValidity(this.validity.patternMismatch ? 'Mandatory field' : '')">
             </box>     
 
             <box class="input-box">
-                <input type="text" placeholder="Fiscal Code" required name="fiscal_code" pattern="([A-z0-9À-ž\s]){2,}" onchange="this.setCustomValidity(this.validity.patternMismatch ? 'Must have at least 2 characters' : '')" >
+                <input type="text" required placeholder="Fiscal Code" name="fiscal_code" pattern="([A-z0-9À-ž\s]){2,}" onchange="this.setCustomValidity(this.validity.patternMismatch ? 'Must have at least 2 characters' : '')" >
             </box>
         </div>
 
             <br><br><br>
 
-        <div style="position:relative; text-align: center">
+        <div style="text-align: center">
             <box class="input-box">
                 <input type="email"  placeholder="Email ID" name ='email'>
             </box>
@@ -117,7 +121,7 @@
 
         <br><br>
 
-        <div style="position:relative; text-align: center">
+        <div style="text-align: center">
             <box class="input-box">
                 <input type="text" required placeholder="Company name" name='company_name' pattern = "([A-z0-9À-ž\s]){2,}" onchange="this.setCustomValidity(this.validity.patternMismatch ? 'Must have at least 2 characters':'')">
             </box>
@@ -128,7 +132,7 @@
 
             <br><br><br>
 
-        <div style="position:relative; text-align: center">
+        <div style="text-align: center">
             <box class="input-box"> 
                 <input type="text" required onfocus="(this.type='date')" onfocusout="(this.type='date_foundation')" placeholder="Date of Foundation" name ='date_foundation' onchange="this.setCustomValidity(this.validity.patternMismatch ? 'Mandatory field' : '')">
             </box>
@@ -139,7 +143,7 @@
 
             <br><br><br>
 
-        <div style="position:relative; text-align: center">
+        <div style="text-align: center">
             <box class="input-box">
                 <input type="text" required placeholder="City" name="city" pattern="([A-z0-9À-ž\s]){2,}" onchange="this.setCustomValidity(this.validity.patternMismatch ? 'Please enter the city' : '');" >
             </box>
@@ -150,7 +154,7 @@
     
             <br><br><br>
 
-        <div style="position:relative; text-align: center">
+        <div style="text-align: center">
             <box class="input-box">
                 <input type="text" required placeholder="ZIP Code"  name="zip" pattern="([A-Z0-9\s]){3,}" onchange="this.setCustomValidity(this.validity.patternMismatch ? 'Must have at least 3 characters' : '');" >
             </box>
@@ -161,18 +165,23 @@
 
         <br><br>
 
-        <div style="position:relative; text-align: center">
+        <div style="text-align: center">
             <box class="input-box">
                 <input type="text" required placeholder="VAT Number" name="vat" pattern="[0-9]{11}" onchange="this.setCustomValidity(this.validity.patternMismatch ? 'Insert 11 digits': '') ; " >
             </box>
         </div>
 
-            <br><br>
+        <br><br>
 
 </Next>
-       
+
+
+    <center><div class="g-recaptcha brochure__form__captcha" data-sitekey=" 6Ldpo_IdAAAAAErEztJuBBXKeayfs3MF-ymYD8Qz" data-theme="dark"></div></center>
+
         <div id='menubar1' style="text-align:center">
             <a><input class="button" type= "submit" value= "Subscribe"></b></a>
+
+            <br><br>
         </div>
         
 </form>
@@ -270,6 +279,13 @@
 </script>  
 
 <style>
+    .fb9 {
+      border: 1px solid #3366FF;
+      background-color: #B3C6FF;
+      width:150px;
+      height:30px;
+    }
+
     input:invalid:focus {
       border-bottom: 2px solid red;
     }
