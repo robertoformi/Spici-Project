@@ -66,7 +66,7 @@
 
         <div style="position:relative; text-align: center">
             <box class="input-boxPWSub">
-                <input id="password1" name="password1" type="password" pattern="^\S{8,}$" onchange="this.setCustomValidity(this.validity.patternMismatch ? 'Must have at least 8 characters' : ''); if(this.checkValidity()) form.password2.pattern = this.value;" placeholder="Password" required>
+                <input id="password1" name="password1" type="password" pattern="^\S{8,}$" onchange="this.setCustomValidity(this.validity.patternMismatch ? 'Must have at least 8 characters.' : ''); if(this.checkValidity()) form.password2.pattern = this.value;" placeholder="Password" required>
                     <i  class="far fa-eye" id="togglePassword" type="checkbox" onclick="MostraPass()" style="text-align:end; position: relative; font-size:larger"></i> 
             </box>
             <box class="input-boxPWSub">
@@ -78,8 +78,8 @@
 
         <div style="position:relative; text-align: center">
             <box class="input-box">
-                <input type="text" onfocus="(this.type='date')" onfocusout="(this.type='Date of Foundation')" placeholder="Date of Birth" name ='age' onchange="this.setCustomValidity(this.validity.patternMismatch ? 'Mandatory field' : '')">
-            </box>
+                <input type="text" required onfocus="(this.type='date')" onfocusout="(this.type='date of birth')" placeholder="Date of Birth" name ='age' onchange="this.setCustomValidity(this.validity.patternMismatch ? 'Mandatory field' : '')">
+            </box>     
 
             <box class="input-box">
                 <input type="text" placeholder="Fiscal Code" required name="fiscal_code" pattern="([A-z0-9À-ž\s]){2,}" onchange="this.setCustomValidity(this.validity.patternMismatch ? 'Must have at least 2 characters' : '')" >
@@ -119,7 +119,7 @@
 
         <div style="position:relative; text-align: center">
             <box class="input-box">
-                <input type="text" placeholder="Company name" name='company_name' required pattern = "([A-z0-9À-ž\s]){2,}" onchange="this.setCustomValidity(this.validity.patternMismatch ? 'Must have at least 2 characters':'')">
+                <input type="text" required placeholder="Company name" name='company_name' pattern = "([A-z0-9À-ž\s]){2,}" onchange="this.setCustomValidity(this.validity.patternMismatch ? 'Must have at least 2 characters':'')">
             </box>
             <box class="input-box">
                 <input type="text" required placeholder="Corporate Purpose" name ='purpose' pattern = "([A-z0-9À-ž\s]){5,}" onchange="this.setCustomValidity(this.validity.patternMismatch ? 'Must have at least 5 characters' : '')">
@@ -130,10 +130,10 @@
 
         <div style="position:relative; text-align: center">
             <box class="input-box"> 
-                <input type="text" onfocus="(this.type='date')" onfocusout="(this.type='Date of Foundation')" placeholder="Date of Foundation" name ='date_foundation' onchange="this.setCustomValidity(this.validity.patternMismatch ? 'Mandatory field' : '')">
+                <input type="text" required onfocus="(this.type='date')" onfocusout="(this.type='date_foundation')" placeholder="Date of Foundation" name ='date_foundation' onchange="this.setCustomValidity(this.validity.patternMismatch ? 'Mandatory field' : '')">
             </box>
             <box class="input-box">
-                <input type="text" placeholder="Country"  name="country" pattern="([A-z0-9À-ž\s]){2,}" onchange="this.setCustomValidity(this.validity.patternMismatch ? 'Must have at least 2 characters' : '')" >
+                <input type="text" required placeholder="Country"  name="country" pattern="([A-z0-9À-ž\s]){2,}" onchange="this.setCustomValidity(this.validity.patternMismatch ? 'Must have at least 2 characters' : '')" >
             </box>
         </div>
 
@@ -141,10 +141,10 @@
 
         <div style="position:relative; text-align: center">
             <box class="input-box">
-                <input type="text" placeholder="City" name="city" pattern="([A-z0-9À-ž\s]){2,}" onchange="this.setCustomValidity(this.validity.patternMismatch ? 'Please enter the city' : '');" >
+                <input type="text" required placeholder="City" name="city" pattern="([A-z0-9À-ž\s]){2,}" onchange="this.setCustomValidity(this.validity.patternMismatch ? 'Please enter the city' : '');" >
             </box>
             <box class="input-box">
-                <input type="text" placeholder="Street" name="street" pattern="([A-z0-9À-ž\s]){2,}" onchange="this.setCustomValidity(this.validity.patternMismatch ? 'Please enter the street' : '');" >
+                <input type="text" required placeholder="Street" name="street" pattern="([A-z0-9À-ž\s]){2,}" onchange="this.setCustomValidity(this.validity.patternMismatch ? 'Please enter the street' : '');" >
             </box>
         </div> 
     
@@ -152,10 +152,10 @@
 
         <div style="position:relative; text-align: center">
             <box class="input-box">
-                <input type="text" placeholder="ZIP Code"  name="zip" pattern="([A-Z0-9\s]){3,}" onchange="this.setCustomValidity(this.validity.patternMismatch ? 'Must have at least 3 characters' : '');" >
+                <input type="text" required placeholder="ZIP Code"  name="zip" pattern="([A-Z0-9\s]){3,}" onchange="this.setCustomValidity(this.validity.patternMismatch ? 'Must have at least 3 characters' : '');" >
             </box>
             <box class="input-box">
-                <input type="text" placeholder="Share capital" name="share_capital" pattern="[0-9]{3,}" onchange="this.setCustomValidity(this.validity.patternMismatch ? 'At least 1euro': '');" >
+                <input type="text" required placeholder="Share capital" name="share_capital" pattern="[0-9]{3,}" onchange="this.setCustomValidity(this.validity.patternMismatch ? 'At least 1euro': '');" >
             </box>
         </div>
 
@@ -163,7 +163,7 @@
 
         <div style="position:relative; text-align: center">
             <box class="input-box">
-                <input type="text" placeholder="VAT Number" name="vat" pattern="[0-9]" onchange="this.setCustomValidity(this.validity.patternMismatch ? 'Insert 11 digits': '') ; " >
+                <input type="text" required placeholder="VAT Number" name="vat" pattern="[0-9]{11}" onchange="this.setCustomValidity(this.validity.patternMismatch ? 'Insert 11 digits': '') ; " >
             </box>
         </div>
 
