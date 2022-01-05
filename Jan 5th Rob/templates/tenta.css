@@ -1,0 +1,411 @@
+
+  *{
+    margin: 0;
+    padding: 0;
+}
+
+.font {
+  font-family: 'Roboto', sans-serif
+}
+
+body {
+  margin:0;
+  height: 100%;      
+  background-image: url(http://www.scienzesociali.unina.it/documents/11791783/0/Campus+San+Giovanni+a+Teduccio/e7d80161-c125-451c-92c9-286b3ea4fed2?t=1621247246102);
+  background-size: cover;
+  background-position:center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+.logged-in-background{ 
+
+  background-image: url(https://www.em-normandie.com/sites/default/files/2018-09/campania_na_napoli_polo_di_san_giovanni_a_teduccio_0021.jpg);
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  height: 100%;
+}
+
+#navbar {
+  position: sticky;
+  top: 0;
+  overflow: hidden;
+  background-color: rgba(0,0,0,0.8);
+}
+
+  
+.form-box{ 
+  
+  width: 550px;
+  background: rgba(0, 0, 0, 0.75);
+  margin: auto;
+  margin-top: 80px;
+  padding: 20px 0;
+  color: #fff;
+  box-shadow: 0 0 20px 2px rgba(0, 0, 0, 0.5);
+  border-radius: 12px;
+}
+
+
+
+.form-box2{ /* Riquadro centrale sulla pagina html dove inserire i dati che modificano il suo aspetto*/
+
+  width: 900px;
+  background: rgba(0,0,0,0.8);
+  margin: 40px auto;
+  margin-left: 235px;
+  padding: 40px 0;
+  color: #fff;
+  box-shadow: 0 0 20px 2px rgba(0, 0, 0, 0.5);
+  border-radius: 12px;
+}
+
+.form-box3{ /* logged in*/
+
+  width: 900px;
+  background: rgba(0,0,0,0.8);
+  margin: 40px auto;
+  padding: 40px 0;
+  color: #fff;
+  box-shadow: 0 0 20px 2px rgba(0, 0, 0, 0.5);
+  border-radius: 12px;
+}
+
+.form-box4{ /* logged in*/
+
+  width: 1150px;
+  background: rgba(0,0,0,0.8);
+  margin: 1px auto;
+  padding: 10px 0;
+  color: #fff;
+  box-shadow: 0 0 20px 2px rgba(0, 0, 0, 0.5);
+  border-radius: 12px;
+}
+
+.form-box5{ /* logged in*/
+
+  width: 650px;
+  background: rgba(0,0,0,0.8);
+  margin: 20px ;
+  padding: 40px 0;
+  color: #fff;
+  box-shadow: 0 0 20px 2px rgba(0, 0, 0, 0.5);
+  border-radius: 12px;
+}
+
+.form-box6{ /* logged in*/
+
+  width: 650px;
+  background: rgba(0,0,0,0.8);
+  margin-top: -300px;
+  margin-left: 700px;
+  padding: 40px 0;
+  color: #fff;
+  box-shadow: 0 0 20px 2px rgba(0, 0, 0, 0.5);
+  border-radius: 12px;
+}
+
+
+
+
+h1{
+    text-align: center;
+    margin-bottom: 25px;
+}
+h2{
+    text-align: center;
+  }
+
+
+
+.input-box{   /* box dove inserire i dati */
+    margin: 25px;
+    width: 35%;
+    border-bottom: 1px solid #fff;
+    padding-top: 10;
+    text-align: center
+}
+
+
+.input-box input{
+  width: 35%;
+  border: none;
+  outline: none;
+  background: transparent;
+  color:white;
+  text-align: center;
+  font-size: 15px;
+}
+
+.input-boxPWSub{
+  margin: 25px;
+  width: 33%;
+  border-bottom: 1px solid #fff;
+  padding-top: 10;
+  text-align: center
+}
+
+
+.input-boxPWSub input{
+  width: 32%;
+  border: none;
+  outline: none;
+  background: transparent;
+  color:white;
+  text-align: center;
+  font-size: 15px;
+}
+   
+.input-boxPW{
+  margin: 30px auto;
+  width: 46%;
+  margin-left: 135px;
+  border-bottom: 1px solid #fff;
+  padding-top: 10
+}
+
+
+.input-boxPW input{
+  width: 100%;
+  border: none;
+  outline: none;
+  background: transparent;
+  color:white;
+  text-align: left;
+  font-size: 15px;
+}
+
+.input-boxLog{   
+  margin: 30px auto;
+  width: 50%;
+  border-bottom: 1px solid #fff;
+  padding-top: 10;
+  text-align: left;
+}
+
+
+.input-boxLog input{
+width: 91%;
+border: none;
+outline: none;
+background: transparent;
+color:white;
+text-align: left;
+font-size: 15px;
+}
+
+::placeholder{  /* mi permette di scrivere "E-mail ID", "password", etc... nei riquadri */
+  color: #ccc;
+  text-align: center;
+  font-size: 15px
+}
+
+
+ /* Barra di navigazione posta sopra a tutto(header) */
+
+  
+  /* Navbar links */
+  #navbar a {
+    float: left;
+    display: block;
+    color: whitesmoke;
+    text-align: center;
+    padding: 20px;
+    font-size: 16px;
+    text-decoration: none;
+  }
+
+ #navbar a:hover {
+  text-decoration: none;
+  font-size: 20px;
+  color:  #006fee;
+  display: block;
+  transition: background 0.7s linear 0.1s , color 0.7s linear 0s
+  
+}
+  
+  
+  /* Page content */
+
+
+   /* Barra laterale sinistra dove sto inserendo gli strumenti che abbiamo utilizzato */
+.sidenav {
+    position: fixed;
+    right: 0px;
+    overflow: hidden; 
+    width: 170px;
+    background-color:rgba(0, 0, 0, 0.8); 
+    border-bottom-left-radius: 8px;
+  }
+
+
+.sidenav f {
+  padding: 6px 8px 6px 16px;
+  text-decoration: none;
+  font-size: 16px;
+  color: whitesmoke;
+  display: block;
+}
+  
+  /* When you mouse over the navigation links, change their color */
+.sidenav f:hover {
+  text-decoration: none;
+  font-size: 20px;
+  color: #00af0f;
+  display: block;
+  transition: background 0.7s linear 0.1s , color 0.7s linear 0s
+}
+
+.sidenav c {
+  padding: 6px 8px 6px 16px;
+  text-decoration: none;
+  font-size: 16px;
+  color: whitesmoke;
+  display: block;
+}
+  
+  /* When you mouse over the navigation links, change their color */
+.sidenav c:hover {
+  text-decoration: none;
+  font-size: 20px;
+  color: #0f2394;
+  display: block;
+  transition: background 0.7s linear 0.1s , color 0.7s linear 0s
+}
+
+.sidenav d {
+  padding: 6px 8px 6px 16px;
+  text-decoration: none;
+  font-size: 16px;
+  color: whitesmoke;
+  display: block;
+}
+  
+  /* When you mouse over the navigation links, change their color */
+.sidenav d:hover {
+  text-decoration: none;
+  font-size: 20px;
+  color: #960000;
+  display: block;
+  transition: background 0.7s linear 0.1s , color 0.7s linear 0s
+}
+
+.sidenav2 {
+  position: fixed;
+  margin-top: 250px;
+  right: 0px;
+  overflow: hidden; 
+  width: 170px;
+  background-color:rgba(0, 0, 0, 0.8); 
+  border-bottom-left-radius: 8px;
+  border-top-left-radius: 8px;
+}
+
+.logout {
+  position: relative;
+  text-align: right;
+}
+
+.welcome {
+  font-family: 'Roboto', sans-serif; 
+  font-size: 50px; 
+  color:whitesmoke; 
+  background-color:rgba(0, 0, 0, 0.8); 
+  border-radius: 10px;
+}
+
+.button {  
+  background-color: transparent;
+  border: none;
+  color: rgb(255, 255, 255);
+  padding: 15px 12px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+.button2 {  
+  background-color: transparent;
+  border: none;
+  color: rgb(255, 255, 255);
+  padding: 15px 2px;
+  text-align: center;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+div#menubar1{ 
+  padding: 0px; border:#999 0px;
+
+}
+
+div#menubar1 > a{
+    font-size:17px;
+    background: #333;
+    padding: 12px;
+    color:#999;
+    text-decoration:none;
+    border-radius: 20px;
+    transition: background 0.7s linear 0.1s , color 0.5s linear 0s;
+      
+}
+div#menubar1 > a:hover{
+    background: #006fee;
+    color: #FFF;
+}
+
+div#menubar3{ 
+  padding: 0px; border:#999 0px;
+
+}
+
+div#menubar3 > a{
+    font-size:17px;
+    background: #333;
+    padding: 12px;
+    color:#999;
+    text-decoration:none;
+    border-radius: 30px;
+    transition: background 0.7s linear 0.1s , color 0.5s linear 0s;
+      
+}
+div#menubar3 > a:hover{
+    background: #006fee;
+    color: #FFF;
+}
+
+
+
+.tooltip {
+  position: relative;
+  display: inline-block;
+  border-bottom: 1px dotted black;
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 300px;
+  background-color: rgba(189, 189, 189, 0.596);
+  color: #fff;
+  text-align: center;
+  font-size: 15px;
+  border-radius: 6px;
+  padding: 5px 0;
+
+  /* Position the tooltip */
+  position: absolute;
+  margin: 3px;
+  z-index: 1;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+}

@@ -1,0 +1,59 @@
+<html style="font-family: 'Roboto', sans-serif">
+    <div class="logged-in-background">
+    <head>
+        <link rel="stylesheet" type="text/css" href="tenta.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:wght@300">
+    </head>
+    <br>
+    <br>
+
+    <div class="sidenav2">
+        <br><br>
+        <center><a style="font-size:30px; color:rgb(37, 37, 255)" href="login.html" class="Logout">Log-out</a><br></center>
+        <br><br>
+    </div>
+
+    <p class="form-box4" style="font-size: 30px; color:whitesmoke; text-align: center">Welcome, <i>Roberto</i>! 
+        You have successfully subscribed to the Spici Database.</p>
+
+    <div class="form-box5">
+        
+        <table>
+            {% for key, value in doc.items() %}
+               <tr>
+                    <th> {{ key }} </th>
+                    <td> {{ value }} </td>
+               </tr>
+            {% endfor %}
+        </table>
+
+     <pre style="font-size:22px"><center><a style = "font-size: 20px">Here are listed all your personal informations:</a></center><br>    • Name:
+    • Surname:
+    • Date of Birth:
+    • Fiscal Code:
+    • Email ID:
+    • Phone Number:
+
+    <i style="font-size: 15px">The password isn't shown because it is a sensible info.</i></pre>
+
+    </div>
+
+    <div class="form-box6">
+
+   <pre style="font-size:22px"><center><a style = "font-size: 20px">Here are listed all your company's informations:</a></center><br>    • Company Name:</a>        
+    • Corporate Purpose:</a> 
+    • Date of foundation:</a> 
+    • Legal Representative:</a> 
+      Headquarter informations</a> 
+       •Country:</a>
+       •ZIP code:</a>
+       •Street:</a>
+    • Share Capital:</a> 
+    • VAT Code:</a></pre> 
+ 
+    </div>
+
+    
+    </body>
+</div>
+</html>

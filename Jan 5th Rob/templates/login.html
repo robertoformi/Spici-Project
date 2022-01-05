@@ -1,0 +1,88 @@
+
+
+<html lang="en">
+    <head>
+        <title>Spicy Database</title>
+        <link rel="stylesheet" type="text/css" href="https://drive.google.com/uc?export=view&id=1alO952ux43Lz_5-m2U8TFg7DVNou-tzF"> 
+        <link rel="stylesheet" type="text/css" href="tenta.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+        <script src="https://code.iconify.design/2/2.1.0/iconify.min.js"></script>
+    </head>
+
+    <div id="navbar">
+        <a href="http://www.unina.it/home;jsessionid=57876DFDEB75069A6881C6DFB84B69B8.node_publisher11  ">| Unina Website &#127891;</a>
+        <a href="http://datascience.unina.it/">| Data Science Unina Website &#128187;</a>
+        <a href="https://www.spici.eu/en/home-en/">| Spici Website 🌶️</a>
+    </div>
+
+    <div class="sidenav">
+        <center><b style="font-size:20px; color:whitesmoke"> Powered By</b></center><br>
+            <b><a href="https://www.mongodb.com/" style="text-decoration: none"><f>| MongoDB <span class="iconify" data-icon="simple-icons:mongodb" style="color: #099407;"></span></f></a></b>
+            <b><a href="https://www.python.org/" style="text-decoration: none"><c>| Python <span class="iconify" data-icon="logos:python"></span></c></a></b>
+            <b><a href="https://flask.palletsprojects.com/en/2.0.x/" style="text-decoration: none"><d>| Flask  <span class="iconify" data-icon="cib:flask" style="color: #c23213;"></span></a></d></b><br>
+    </div>
+
+      <body style="font-family: 'Roboto', sans-serif">            
+        <div class="form-box">
+            
+            <h1 >Welcome to the Spici Database</h1>
+            <h2 >Please sign-in:</h2>
+
+
+            <form class ="form-login" actions="/logged_in" method ="POST">
+
+                <div class="input-boxLog" style="text-align:left">
+                    <input type="email" placeholder="Email ID" name='email'>
+                </div>
+
+                <div style="font-size: 16px">   
+                    {% with messages = get_flashed_messages() %}
+                        {% if messages %}
+                            {% for message in messages %}
+                                <p style= "text-align:center">{{message}}</p>
+                            {% endfor %}
+                        {% endif %}
+                    {% endwith %} 
+                </div>
+
+
+                <div class="input-boxPW" style="text-align:left">
+                    <input type="password" placeholder="Password" id="myInput" name='pw'><i  class="far fa-eye" id="togglePassword" type="checkbox" onclick="myFunction()" style="text-align:end; position: fixed; font-size:larger"></i> 
+                </div>
+
+                <div id='menubar1' style="text-align: center">
+                    <a><input type ="submit" value="Sign-in" class="button"></a>
+                </div>      
+                <div class="center" style="text-align:center">
+
+                    <br>
+    
+                    First time here?<a style="color:rgb(37, 37, 255)" href="subscribe.html" class="button"><b>Subscribe!</b></a>  
+                </div>
+
+            </form> 
+        </div>
+x
+
+    </body>
+</html>
+
+
+
+
+
+<script>
+
+    function myFunction() {
+        var x = document.getElementById("myInput");
+        if (x.type === "password") {
+        x.type = "text";
+        } else {
+        x.type = "password";
+        }}
+        
+    </script>
+    
