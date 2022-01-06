@@ -1,28 +1,60 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <link rel="stylesheet" type="text/css" href="https://drive.google.com/uc?export=view&id=1alO952ux43Lz_5-m2U8TFg7DVNou-tzF"> 
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Spici Database</title>
-</head>
-<body>
-    <h2>Hello!</h2>
-    'Nice to meet you'
-    <div class="col s12 m4 offset-m2 l6 offset-l3">
-        <meta http-equiv="refresh" content="6;url=/">
-        <div class="row valign-wrapper">
-            <div class="col s2">
-            <!-- CHANGE THIS PICTURE (WE SUGGEST A SPICI PICTURE)-->
-            <img src="https://upload.wikimedia.org/wikipedia/it/1/11/Napoli_university_seal_alfachannel.png"
-            alt="Università degli Studi di Napoli Federico II - Wikipedia" jsname="HiaYvf" jsaction="load:XAeZkd;"
-            class="n3VNCb" data-noaft="1" style="width: 450px; height: 448.272px; margin: 10.3141px 0px;">>
-            </div>
-        </div>
+<html style="font-family: 'Roboto', sans-serif">
+    <div class="logged-in-background">
+    <head>
+        <link rel="stylesheet" type="text/css" href="https://drive.google.com/uc?export=view&id=1alO952ux43Lz_5-m2U8TFg7DVNou-tzF"> 
+        <link rel="stylesheet" type="text/css" href="tenta.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:wght@300">
+    </head>
+    <br>
+    <br>
+
+    <div class="sidenav2">
+        <br><br>
+        <center><a style="font-size:30px; color:rgb(37, 37, 255)" href="/" class="Logout">Go back</a><br></center>
+        <br><br>
     </div>
-</body>
-</html>
-   
+
+    <p class="form-box4" style="font-size: 30px; color:whitesmoke; text-align: center">Welcome, <i>Roberto</i>! 
+        You have successfully subscribed to the Spici Database.</p>
+
+     <div style= "display:table"> 
+        <table style="font-size: 24px;color: whitesmoke; margin: 40px; margin-left: 500px; background-color:rgba(0, 0, 0, 0.705)">
+            {% for key, value in doc.items() %}
+               <tr>
+                    <th> {{ key }} </th>
+                    <td> {{ value }} </td>
+               </tr>
+            {% endfor %}
+        </table>
+    </div>
+
+   <!--  <pre style="font-size:22px"><center><a style = "font-size: 20px">Here are listed all your personal informations:</a></center><br>    • Name:
+    • Surname:
+    • Date of Birth:
+    • Fiscal Code:
+    • Email ID:
+    • Phone Number:
+
+    <i style="font-size: 15px">The password isn't shown because it is a sensible info.</i></pre>
+
+    </div>
+
+    <div class="form-box6">
+
+   <pre style="font-size:22px"><center><a style = "font-size: 20px">Here are listed all your company's informations:</a></center><br>    • Company Name:</a>        
+    • Corporate Purpose:</a> 
+    • Date of foundation:</a> 
+    • Legal Representative:</a> 
+      Headquarter informations</a> 
+       •Country:</a>
+       •ZIP code:</a>
+       •Street:</a>
+    • Share Capital:</a> 
+    • VAT Code:</a></pre> -->
+ 
+    </div>
 
     
+    </body>
+</div>
+</html>
