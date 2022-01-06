@@ -2,8 +2,4 @@ Sostituite gli html nel folder "template" e mettete main e crypting nel main fol
 
 Se provate a registrarvi rispettando tutti i parametri (sottolineatura verde), verrete portati alla pagina greet html in cui printa tutti i risultati. 
 
-Non so perchè non carica il layout di css.
-
-Bisogna aggiustare la parte di login che non funziona, però riconosce la mail se è sul database o meno, i flash funzionano altrettanto.
-
 Bisogna ordinare tutti i dati printati senza far printare le key del documento di mongodb.
