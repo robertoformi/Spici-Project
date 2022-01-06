@@ -3,6 +3,7 @@ from pymongo import MongoClient
 from crypting import checkingPassword, codingPassword
 
 cluster = MongoClient("mongodb://localhost:27017/?readPreference=primary&appname=MongoDB%20Compass&directConnection=true&ssl=false")
+# cluster = MongoClient("mongodb+pi://progetto:1234@cluster0.69yom.mongodb.net/spici_project?retryWrites=true&w=majority")
 db = cluster["spici_project"]
 collection = db["business_data"]
 
