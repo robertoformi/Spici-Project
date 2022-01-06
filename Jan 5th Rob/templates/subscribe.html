@@ -43,7 +43,7 @@
         <h1> Account Registration Form</h1>
 
         <center><div id="menubar1">
-            <a type="button" class="button2" onclick="show2()" style="font-size: 23px"><i class="fas fa-bars"></i></a> 
+            <a type="button" class="button2" onclick="show2()" style="font-size: 23px"><i style= "font-size: 23px" class="fas fa-bars"></i></a> 
             <span style="font-size: 23px">Personal Details 
                 <span class="iconify" data-icon="bx:bxs-user">
                 </span> 
@@ -98,7 +98,7 @@
             </box>
 
             <box class="input-box">
-                <input type="text" placeholder="Phone Number" required name="phone_num" pattern="([0-9){2,}" onchange="this.setCustomValidity(this.validity.patternMismatch ? 'Must have at least 2 characters' : '')" >
+                <input type="text" placeholder="Phone Number" required name="phone_num" pattern="([0-9]{5,})" onchange="this.setCustomValidity(this.validity.patternMismatch ? 'Must have at least 2 numbers' : '')" >
             </box>
         </div>
 
@@ -278,6 +278,21 @@
 
 </script>  
 
+<script>
+
+window.onload = function() {
+    var $recaptcha = document.querySelector('#g-recaptcha-response');
+
+    if($recaptcha) {
+        $recaptcha.setAttribute("required", "required");
+    }
+
+};
+
+</script>
+
+
+
 <style>
     .fb9 {
       border: 1px solid #3366FF;
@@ -289,7 +304,9 @@
     input:invalid:focus {
       border-bottom: 2px solid red;
     }
+    
     input:valid:focus {
         border-bottom: 2px solid green
     }
+
 </style>
