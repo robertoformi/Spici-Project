@@ -54,7 +54,7 @@ def subscribe():
         
         if email_is_already_stored(email):
             flash("Try with another email: the email is already stored", "error")   
-            return redirect('/subscribe')
+            return redirect('/subscribe.html')
         else:
             data = {"Name": name,
                     "Surname": surname,
@@ -86,7 +86,7 @@ def logged_in():
         doc = data_finder(session["email"])                 
         return render_template("logged_in.html", doc = doc) 
     else:
-        flash("Please first Login!", "error")         
+        flash("Please Login first!", "error")         
         return redirect('/')
 
 
@@ -100,6 +100,12 @@ def logout():
 @app.route('/greet/<email>')
 def greet(email):
     return render_template("greet.html", doc = data_finder(email))
+
+    #Permits the user to go back to the login page from the subscribe page (right blue button).
+@app.route('/login.html')
+def goback():
+    return render_template("login.html")
+
 
 def email_is_already_stored(email):
     '''Returns True if email is already in the database, False if not'''
@@ -125,7 +131,6 @@ def password_finder(email):
     return rescued_hashed_password
 
 def data_finder(email): 
-
     '''Returns all the user information but id and pw'''
     cur = collection.find({"email": email}) 
     for doc in cur:
