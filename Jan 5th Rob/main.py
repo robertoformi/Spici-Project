@@ -19,9 +19,9 @@ def login():
             return redirect('/')
         else:
             if(checkingPassword(password, password_finder(email))):
-                session["name"] = user_finder(email)         # These two lines of code are needed for presenting a table with the user information in the logged_in page. Check the logged_in function (you will see that both name and email are needed).
+                session["name"] = name_finder(email)         # These two lines of code are needed for presenting a table with the user information in the logged_in page. Check the logged_in function (you will see that both name and email are needed).
                 session["email"] = email                   
-                return redirect('/logged.in')
+                return redirect('/logged_in')
             else:
                 flash("Wrong password", "error")         
                 return redirect('/')
@@ -56,22 +56,22 @@ def subscribe():
             flash("Try with another email: the email is already stored", "error")   
             return redirect('/subscribe')
         else:
-            data = {"name": name,
-                    "surname": surname,
+            data = {"Name": name,
+                    "Surname": surname,
                     "email": email, 
                     "ps": codingPassword(ps1),
-                    "age": age,
-                    "fiscal_code": fiscal_Code,
-                    "phone_num": phone_num,
-                    "company_name": company_name,
-                    "purpose": purpose,
-                    "date_foundation": date_foundation,
-                    "city": city,
-                    "street": street,
-                    "zip": zip,
-                    "share_capital": share_capital,
-                    "vat": vat,
-                    "country": country
+                    "Age": age,
+                    "Fiscal Code": fiscal_Code,
+                    "Phone Number": phone_num,
+                    "Company's Name": company_name,
+                    "Company's Purpose": purpose,
+                    "Date of Foundation": date_foundation,
+                    "City": city,
+                    "Street": street,
+                    "ZIP Code": zip,
+                    "Share Capital": share_capital,
+                    "VAT Code": vat,
+                    "Country": country
                     }
 
             collection.insert_one(data)
@@ -109,12 +109,12 @@ def email_is_already_stored(email):
 # collection.find_one({"email": email}) == None  returns False. So not(False)=True. So, if the email is in the
 # database, this function returns True.
 
-def user_finder(email): 
+def name_finder(email): 
     '''Returns the username stored according to the email inserted'''
     cur = collection.find({"email": email})   # Since we use .find and not .find_one, the result is a cursor
     # that basically returns all the dictionaries with the email equal to the email we selected.
     for doc in cur:  
-        return doc["user"]
+        return doc["name"]
 
 def password_finder(email):
     '''Returns the hashed password stored according to the email inserted'''
